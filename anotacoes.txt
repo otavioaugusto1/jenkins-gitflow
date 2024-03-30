@@ -1,0 +1,4 @@
+Comando para adquirir as Senhas do Jenkins
+
+kubectl get secrets -n jenkins jenkins -ojson | jq -r '.data."jenkins-admin-password"' | base64 -d
+
